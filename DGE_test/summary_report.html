@@ -369,10 +369,9 @@ display: none;
 <ul>
 <li>DGE: showed poor results with all the methods tested, z-score more
 reliably for high and low logFC but not for lowFC</li>
-<li>GO terms are good for the Eyrthroid cells and Pro-B cells. In the
-second case highlights the proliferation stages.</li>
-<li>Result: <strong>DISCARDED? DGE are difficult to evaluate but GO
-terms are good</strong></li>
+<li>GO terms are good for the Eyrthroid cells. For Pro-B cells
+highlights the proliferation stages.</li>
+<li>Result: <strong>DISCARDED</strong></li>
 </ul></li>
 <li>Seurat:
 <ul>
@@ -393,7 +392,7 @@ highlights high transcription and translation activity</li>
 <li>DGE: DE genes expression is visible in both high and low logFC</li>
 <li>GO terms are not specific erythroid cells, for pro-B cells are
 similar to previous methods</li>
-<li>Result: <strong>KEEP?</strong></li>
+<li>Result: <strong>DISCARD</strong></li>
 </ul></li>
 <li>DESeq2+combat
 <ul>
@@ -407,22 +406,23 @@ involved in their maturation (<a href="https://doi.org/10.4161/auto.2.2.2350">he
 <ul>
 <li>DGE: poor finding differentially expressed genes</li>
 <li>GO: similar to DESeq2+combat</li>
-<li>Result: <strong>DISCARDED</strong></li>
+<li>Result: <strong>DISCARD</strong></li>
 </ul></li>
 <li>limma/limma_combat:
 <ul>
 <li>DGE: high amount of genes, low abs(logFC) not clear</li>
 <li>GO: Highlights other Erythrocytes maturation features
-(glucosilation)</li>
-<li>Result: <strong>DISCARDED?</strong></li>
+(glucosilation) found also with other methods (edgeR with better
+division lowFC genes and Seurat)</li>
+<li>Result: <strong>DISCARD</strong></li>
 </ul></li>
 <li>edgeR/edgeR_combat:
 <ul>
 <li>DGE: high amount of genes, good division of expression in abs(logFC)
 genes</li>
-<li>GO: Specific for erythrocytes maturation (combat most specific of
-the pseudobulk methods)</li>
-<li>Result: <strong>KEEP combat</strong></li>
+<li>GO: Specific for erythrocytes maturation (combat most specific among
+pseudobulk methods)</li>
+<li>Result: <strong>KEEP only combat</strong></li>
 </ul></li>
 </ul>
 </div>
