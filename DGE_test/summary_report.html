@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jacopo Umberto Verga" />
 
-<meta name="date" content="2022-12-13" />
+<meta name="date" content="2023-01-13" />
 
 <title>summary DGE algorithms</title>
 
@@ -354,108 +354,175 @@ display: none;
 
 <h1 class="title toc-ignore">summary DGE algorithms</h1>
 <h4 class="author">Jacopo Umberto Verga</h4>
-<h4 class="date">2022-12-13</h4>
+<h4 class="date">2023-01-13</h4>
 
 </div>
 
 
-<div id="summary-results-dge-expression" class="section level1">
-<h1>Summary results DGE expression:</h1>
-<p>Full report <a href="./report.html">here</a></p>
+<div id="summary-results-dge-expression-mm" class="section level1">
+<h1>Summary results DGE expression MM:</h1>
+<p>Full report <a href="./report_mm.html">here</a></p>
 <div id="single-cell-methods" class="section level2">
 <h2>Single cell methods:</h2>
 <ul>
 <li>Scanpy:
 <ul>
 <li>DGE: showed poor results with all the methods tested, z-score more
-reliably for high and low logFC but not for lowFC</li>
-<li>GO terms are good for the Eyrthroid cells. For Pro-B cells
-highlights the proliferation stages.</li>
+reliably for high and low logFC but not for low abs(logFC)</li>
+<li>GO tterms are related to immune system</li>
 <li>Result: <strong>DISCARDED</strong></li>
 </ul></li>
 <li>Seurat:
 <ul>
-<li>DGE: showed better results in high and low lFC values, the genes
-found uniquely with the t-test could show some batch specific
-expression</li>
-<li>GO terms: are the most specific for erythrocites, for pro-B cells
-highlights high transcription and translation activity</li>
-<li>Result <strong>KEEP ONLY Wilcoxon/Logreg</strong></li>
+<li>DGE: showed better results, DE genes are appreciable to all logFC
+levels (T)</li>
+<li>GO terms:UP specific for immune activity and MHC-II antigen
+presentation. Down for cell response</li>
+<li>Result <strong>KEEP, T-test results more clear? anyway very
+similar</strong></li>
 </ul></li>
 </ul>
 </div>
 <div id="pseudobulk" class="section level2">
 <h2>Pseudobulk</h2>
 <ul>
-<li>DESeq2-LRT: showed a little of batch effect in the clustering.
+<li>DESeq2-LRT:
 <ul>
-<li>DGE: DE genes expression is visible in both high and low logFC</li>
-<li>GO terms are not specific erythroid cells, for pro-B cells are
-similar to previous methods</li>
+<li>DGE: DE genes expression less clear</li>
+<li>GO terms similar to seurat</li>
 <li>Result: <strong>DISCARD</strong></li>
 </ul></li>
 <li>DESeq2+combat
 <ul>
-<li>DGE: genes expression is visible in both high and low logFC, really
-high number of genes</li>
-<li>GO: Not super specific to erythrocytes but highlights pathways
-involved in their maturation (<a href="https://doi.org/10.4161/auto.2.2.2350">here</a>)</li>
-<li>Result: <strong>KEEP</strong></li>
+<li>DGE: different expression appreciable only for low abs(LogFC)
+genes</li>
+<li>GO: GO terms similar to above.</li>
+<li>Result: <strong>DISCARD</strong></li>
 </ul></li>
 <li>DESeq2 + sva
 <ul>
-<li>DGE: poor finding differentially expressed genes</li>
-<li>GO: similar to DESeq2+combat</li>
-<li>Result: <strong>DISCARD</strong></li>
+<li>DGE: DE expression clear for high and low LogFC</li>
+<li>GO: similar to above. Maybe Down more specific?</li>
+<li>Result: <strong>KEEP?</strong></li>
 </ul></li>
 <li>limma/limma_combat:
 <ul>
-<li>DGE: high amount of genes, low abs(logFC) not clear</li>
-<li>GO: Highlights other Erythrocytes maturation features
-(glucosilation) found also with other methods (edgeR with better
-division lowFC genes and Seurat)</li>
+<li>DGE: Small amount of genes, only low abs(logFC) clear</li>
+<li>GO: similar to above</li>
 <li>Result: <strong>DISCARD</strong></li>
 </ul></li>
 <li>edgeR/edgeR_combat:
 <ul>
-<li>DGE: high amount of genes, good division of expression in abs(logFC)
-genes</li>
-<li>GO: Specific for erythrocytes maturation (combat most specific among
-pseudobulk methods)</li>
-<li>Result: <strong>KEEP only combat</strong></li>
+<li>DGE: clear only low abs(logFC) genes (combat)</li>
+<li>GO: as above</li>
+<li>Result: <strong>DISCARD</strong></li>
+</ul></li>
+<li>wilcoxon:
+<ul>
+<li>DGE: clear only low abs(logFC) genes</li>
+<li>GO: as above</li>
+<li>Result: <strong>DISCARD</strong></li>
 </ul></li>
 </ul>
 </div>
 </div>
 <div id="conclusions" class="section level1">
 <h1>Conclusions</h1>
-<p>Single cell methods looked like to don’t perform well with genes
-expressed on only one cell type (scanpy) or with low abs(logFC)
-(seurat). Neverthless, the enriched GO terms are quite specific for the
-Erythrocytes (less for pro-B cells). The best method looked like
-<strong>Seurat wx/logreg</strong>.<br /> Pseudobulk methods performed
-better evaluating genes with low abs(logFC) (especially DESeq2 and
-edgeR). Less specific are the GO terms with the best results obtained
-with <strong>DESeq2-combat and EdgeR-combat</strong></p>
-<p>Since there isn’t a standing winner, in terms of DE genes, pseudobulk
-performs better, in terms of GO terms <code>seurat</code> looks
-performing better. So i decided to use the <strong>bold</strong> methods
-with the NK cells and evaluate there who is the method to bring
-ahead.</p>
-<p>Full report <a href="./report.html">here</a></p>
+<p><strong>SingleCell Methods</strong> Scanpy isn’t clear, evaluating
+the results with the z-score is meaningful and the expression of the
+genes in the groups is clear but it doesn’t provide a neat way to select
+the threshold. Seurat performed better with similar result betwee the
+algorithms. Interstingly, GO terms (similar to all the other methods)
+found more immune activity in exhausted cells (pathways enriched but
+inhibited by checkpoints?) and response to various stimuli in
+residential cells (exhausted cell not receptive to environment?).</p>
+<p><strong>Pseudobulk</strong> In the average DGE genes are less
+disntinguished. DESeq2 showed appreciable differences for low ans high
+LogFC and probably better GO terms.</p>
+<p><strong>Seurat and DESeq2 kept (Seurat best candidate)</strong></p>
 </div>
-<div id="additional-info" class="section level1">
-<h1>Additional info:</h1>
+<div id="summary-results-dge-expression-healthy" class="section level1">
+<h1>Summary results DGE expression Healthy:</h1>
+<p>Full report <a href="./report_healthy.html">here</a></p>
+<div id="single-cell-methods-1" class="section level2">
+<h2>Single cell methods:</h2>
 <ul>
-<li>Single cell methods were run in conda environments, all the
-pseudobulk methods derive from a container I computed. Once finished,
-the container and the scripts to run the DE analysis will be available
-and loaded to the GitHub page of the lab.</li>
-<li>The Sample RRMM_BM_8 has a lower expression of the genes HBA1/HBA2.
-It comes from a patient with other samples that doesn’t show this lower
-expression. Other genes doesn’t show a similar behavior. Should I keep
-it or not?</li>
+<li>Scanpy:
+<ul>
+<li>DGE: showed poor results with all the methods tested, z-score more
+reliably for high and low logFC but not for low abs(logFC). Wilcoxon
+better identify logFC genes</li>
+<li>GO terms are related to immune system and translation
+regulation</li>
+<li>Result: <strong>DISCARDED</strong></li>
+</ul></li>
+<li>Seurat:
+<ul>
+<li>DGE: showed better results, DE genes are appreciable to all logFC
+levels</li>
+<li>GO terms:UP specific for immune activity and MHC-II antigen
+presentation. Down for cell response</li>
+<li>Result <strong>KEEP</strong></li>
+</ul></li>
 </ul>
+</div>
+<div id="pseudobulk-1" class="section level2">
+<h2>Pseudobulk</h2>
+<ul>
+<li>DESeq2-LRT:
+<ul>
+<li>DGE: DE genes expression not clear</li>
+<li>GO Up terms not found, down terms similar to seurat</li>
+<li>Result: <strong>DISCARD</strong></li>
+</ul></li>
+<li>DESeq2+combat
+<ul>
+<li>DGE: DE genes expression not clear</li>
+<li>GO: GO terms similar to above.</li>
+<li>Result: <strong>DISCARD</strong></li>
+</ul></li>
+<li>DESeq2 + sva
+<ul>
+<li>DGE: DE genes expression not clear</li>
+<li>GO: similar to above?</li>
+<li>Result: <strong>DISCARD</strong></li>
+</ul></li>
+<li>limma/limma_combat:
+<ul>
+<li>DGE: High LogFC not clear</li>
+<li>GO: Up as above, down relative to translation regulation</li>
+<li>Result: <strong>DISCARD</strong></li>
+</ul></li>
+<li>edgeR/edgeR_combat:
+<ul>
+<li>DGE: High LogFC not clear</li>
+<li>GO: Up as above, down relative to translation regulation</li>
+<li>Result: <strong>DISCARD</strong></li>
+</ul></li>
+<li>wilcoxon:
+<ul>
+<li>DGE: not clear</li>
+<li>GO: not found downregulated pathways, UP correlated to imune
+response</li>
+<li>Result: <strong>DISCARD</strong></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="conclusions-1" class="section level1">
+<h1>Conclusions</h1>
+<p><strong>SingleCell Methods</strong> Scanpy isn’t clear, evaluating
+the results with the z-score is meaningful and the expression of the
+genes in the groups is clear but it doesn’t provide a neat way to select
+the threshold. The wilcoxon method looks more clear. Seurat performed
+better with similar result between the algorithms. Interstingly, GO
+terms (similar to all the other methods) found more immune activity in
+exhausted cells (pathways enriched but inhibited by checkpoints?) and
+response to various stimuli in residential cells (exhausted cell not
+receptive to environment?).</p>
+<p><strong>Pseudobulk</strong> In the average DGE genes are less
+disntinguished.</p>
+<p><strong>Seurat is the final winner</strong></p>
 </div>
 
 
