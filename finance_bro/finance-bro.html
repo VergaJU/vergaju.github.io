@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Bro App</title>
+    <style>
+        /* Reset margins to make the app full screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevents double scrollbars */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Make the iframe take up 100% of the screen */
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+        /* Styling for a simple back button */
+        .back-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensures the button stays on top of the iframe */
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button to go back to your main GitHub Page -->
+    <a href="index.html" class="back-button">← Back to Home</a>
+
+    <!-- The Embedded Render App -->
+    <iframe src="https://finance-bro-58be.onrender.com/" title="Finance Bro App"></iframe>
+
+</body>
+</html>
