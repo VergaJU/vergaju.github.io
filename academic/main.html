@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>main</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<div class="center">
+<p><strong>Jacopo Umberto Verga, PhD<br />
+</strong> jacopoumberto.verga@gmail.com
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∣</mi><annotation encoding="application/x-tex">\mid</annotation></semantics></math>
+<a href="https://github.com/VergaJU">GitHub</a>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∣</mi><annotation encoding="application/x-tex">\mid</annotation></semantics></math>
+<a href="https://www.linkedin.com/in/jacopoverga/">LinkedIn</a>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∣</mi><annotation encoding="application/x-tex">\mid</annotation></semantics></math>
+<a href="https://orcid.org/0000-0003-3814-5937">ORCiD</a>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∣</mi><annotation encoding="application/x-tex">\mid</annotation></semantics></math>
+<a href="https://vergaju.github.io/">Portfolio</a><br />
+</p>
+</div>
+<p><strong><u>SUMMARY</u></strong></p>
+<p><strong>Computational Scientist (Ph.D.)</strong> with 5+ years of
+experience developing machine learning models and automated workflows
+for the life sciences. Specialized in multi-omics data integration,
+GPU-accelerated computing, and generative AI. Experienced in
+coordinating cross-functional projects and translating complex technical
+findings for clinical and business stakeholders.</p>
+<p><strong><u>CORE SKILLS</u></strong></p>
+<p><strong>Machine Learning &amp; AI</strong>: Generative AI (LLMs,
+Multi-agent systems, RAG, LangChain, LangGraph, LangSmith), Deep
+Learning (PyTorch), Transformer Architectures, Statistical Modeling,
+Predictive Analytics, Clinical ML.<br />
+<strong>Bioinformatics &amp; Computational Biology</strong>: Single-cell
+&amp; Spatial Omics, Multi-omics Integration, Drug Target
+Identification, Oncology &amp; Hematology Research.<br />
+<strong>Software &amp; Infrastructure</strong>: Python, R, Nextflow,
+Snakemake, Docker, Cloud Platforms (AWS, GCP), High-Performance
+Computing (HPC), System Benchmarking.<br />
+<strong>Project Leadership</strong>: Stakeholder Management, Technical
+Mentorship, Rapid Prototyping, Cross-functional Collaboration.</p>
+<p><strong><u>WORK EXPERIENCE</u></strong></p>
+<p><strong>University of Galway</strong> Galway, Ireland<br />
+<em>Research scientist - Postdoc</em> 06, 2026
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+Now</p>
+<ul>
+<li><p>Developed and deployed end-to-end clinical machine learning
+models for oncology.</p></li>
+<li><p>Architected agentic AI systems to automate research workflows by
+integrating disparate databases into analytical pipelines.</p></li>
+<li><p>Delivered timely clinical biostatistical analyses and technical
+insights for external partners.</p></li>
+<li><p>Developed and instructed genomic data analysis coursework for BSc
+and MSc students.</p></li>
+</ul>
+<p><strong>Broad Institute of MIT and Harvard/Dana Farber Cancer
+Institute</strong> Boston, MA<br />
+<em>Visiting Researcher, Medical Oncology</em> 02, 2024
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+11-2025</p>
+<ul>
+<li><p><strong>Led the computational analysis</strong> for multi-modal
+oncology research, partnering with clinicians to analyse spatial biology
+data for clinical applications.</p></li>
+<li><p><strong>Managed a 400-sample scRNA-seq study</strong> using UK
+Biobank data; built GCP-based genomic pipelines with Python and Docker
+to process high-dimensional datasets.</p></li>
+<li><p><strong>Developed statistical and ML models</strong> for CAR-T
+patient stratification, supporting myeloma drug discovery and biomarker
+evaluation - provisional patent.</p></li>
+<li><p><strong>Partnered with StandardBiotools</strong> to integrate 3D
+imaging and GPU acceleration, reducing pipeline image registration times
+by 90%.</p></li>
+<li><p><strong>Deployed a U-Net model</strong> for image denoising,
+optimizing GPU-accelerated training and inference workflows.</p></li>
+</ul>
+<p><strong>University of Galway</strong> Galway, Ireland<br />
+<em>Researcher</em> 09, 2021
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+11, 2025</p>
+<ul>
+<li><p><strong>Analyzed a multi-center &gt;522,000-cell dataset</strong>
+to model immune cell exhaustion, identifying novel therapeutic targets
+currently in in vivo validation.</p></li>
+<li><p><strong>Developed a computational framework</strong> using
+maximum-flow network theory and multi-objective genetic algorithms to
+prioritize key biological drivers.</p></li>
+<li><p><strong>Architected a containerized Nextflow pipeline</strong>
+automating high-throughput single-cell processing, transcriptional
+profiling, and cellular interaction inference.</p></li>
+<li><p><strong>Co-developed an AI system</strong> using LLMs, SQL, and
+RAG to automate unstructured data extraction from literature with tool
+and code execution.</p></li>
+<li><p><strong>Supervised and mentored 100+ students</strong>; taught
+genomic data analysis coursework, and cloud computing (AWS).</p></li>
+</ul>
+<p><strong>CloudCix</strong> Cork, Ireland<br />
+<em>Tester</em> 01, 2023
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+06, 2023</p>
+<ul>
+<li><p><strong>Benchmarked deep learning training</strong> across
+multi-GPU cloud instances using PyTorch and CUDA to evaluate and
+optimize hardware acceleration.</p></li>
+</ul>
+<p><strong>Ancona University Hospital</strong> Ancona, Italy<br />
+<em>Research Assistant, Immunology</em> 07, 2019
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+09, 2021</p>
+<ul>
+<li><p><strong>Analyzed clinical and genetic datasets</strong> for over
+100 immunology patients to evaluate disease risk factors.</p></li>
+<li><p><strong>Conducted safety and efficacy analyses</strong> for CSL
+Behring intravenous pharmaceutical products.</p></li>
+<li><p><strong>Collaborated with clinical teams</strong> to translate
+complex biological datasets into research insights.</p></li>
+</ul>
+<p><strong>Queen’s University Belfast</strong> Belfast, UK<br />
+<em>Intern</em> 02, 2020
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+08, 2020</p>
+<ul>
+<li><p><strong>Executed virtual screenings of 500+ small
+molecules</strong>, utilizing molecular dynamics and protein-protein
+interaction networks.</p></li>
+</ul>
+<p><strong><u>EDUCATION</u></strong></p>
+<p><strong>University of Galway</strong> Galway, Ireland<br />
+<em>PhD, Genomics Data Science</em> 09, 2021
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+11, 2025<br />
+<strong>Marche Polytechnic University</strong> Ancona, Italy<br />
+<em>Master’s Degree, Molecular and Applied Biology</em>2018
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+2021<br />
+<strong>Grade:</strong> 110L/100 (4.0 GPA)<br />
+ <strong>Marche Polytechnic University</strong> Ancona, Italy<br />
+<em>Bachelor’s Degree, Biological Sciences</em>2015
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>
+2018<br />
+<strong>Grade:</strong> 108/100 (3.9 GPA)<br />
+<strong><u>CERTIFICATIONS</u></strong></p>
+<p><strong>Anthropic:</strong> Model Context Protocol (MCP), Agents
+Skills (<strong>ongoing</strong>)<br />
+<strong>Google:</strong> GenAI Intensive Course
+(<strong>04/2025</strong>)<br />
+<strong>NVIDIA:</strong> Building Transformer-based NLP Applications
+(<strong>11/2024</strong>)<br />
+<strong>NVIDIA:</strong> Fundamentals of Deep Learning
+(<strong>10/2024</strong>)<br />
+<strong>CITI Program:</strong> Good Clinical Practice (GCP) for Clinical
+Research (<strong>02/2024</strong>)<br />
+<strong>CITI Program:</strong> Human Research
+(<strong>02/2024</strong>)<br />
+<strong>University of Galway:</strong> Project Management in the Real
+World (<strong>11/2024</strong>)<br />
+<strong><u>AWARDS</u></strong></p>
+<p><strong>Thomas Crawford Hayes Travel Fund</strong> winner,
+<strong>€2300</strong>.<br />
+<strong>Longhack &amp; VitaDAO 2023 hackathon</strong> Winning team,
+Team Leader, <strong>€1000 + 1000 VITA-Coin</strong><br />
+<strong>1<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mrow><mi>s</mi><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">^{st}</annotation></semantics></math>
+prize for the Decisive Data Podium Session</strong> at the CSE Research
+Day, <strong>€200</strong><br />
+<strong><u>PROJECTS</u></strong></p>
+<p><strong>FinanceBro,</strong> investing wallet simulator, developed
+with AI-coding assistant crew (OpenCode, Agents, Skills, LLMs).<br />
+<strong>miRKatAI: Agentic AI for miRNA research,</strong> Google Gen AI,
+SQL, Prompt engineering, GroundSearch, Streamlit<br />
+<strong>Breast Cancer Chatbot: Assistant to analyze clinical/molecular
+data,</strong> Bioinformatics Workflows, AI Agents, LLM,
+Autoencoders<br />
+<strong>AI Maria: Fine-tuned LLM for Myeloma Research
+Assistant,</strong> Transformers, Fine tuning, RoBERTa<br />
+<strong><u>LANGUAGES</u></strong></p>
+<p><strong>Language:</strong> English (C1 - Full Professional
+Proficiency), Italian (Native), Spanish (B2)</p>
+<p><strong><u>PUBLICATIONS</u></strong><br />
+</p>
+</body>
+</html>

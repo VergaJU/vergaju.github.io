@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic — Jacopo Umberto Verga</title>
+  <meta name="description" content="Academic projects, publications, and collaborations of Jacopo Umberto Verga — AI Research Scientist & Computational Biologist." />
+  <meta property="og:title" content="Academic — Jacopo Umberto Verga" />
+  <meta property="og:description" content="Academic projects, publications, and collaborations." />
+  <meta property="og:url" content="https://vergaju.github.io/academic/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23212121'/%3E%3Ctext x='50' y='68' font-family='DM Sans, sans-serif' font-size='48' font-weight='700' fill='%23f7df1e' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <style>
+    .page-header {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .page-header p {
+      color: var(--gray);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--yellow);
+      font-weight: 500;
+      margin-bottom: 40px;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover {
+      opacity: 0.8;
+    }
+    section.academic-section {
+      margin-bottom: 60px;
+    }
+    section.academic-section h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    section.academic-section h2 i {
+      color: var(--yellow);
+      font-size: 1.5rem;
+    }
+    .placeholder-box {
+      background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);
+      border: 1px dashed var(--gray-200);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      color: var(--gray);
+    }
+    .placeholder-box i {
+      font-size: 2rem;
+      color: var(--yellow);
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+    .placeholder-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .placeholder-box .hint {
+      font-size: 0.85rem;
+      margin-top: 8px;
+      opacity: 0.6;
+      font-style: italic;
+    }
+    .academic-card {
+      background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .academic-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .academic-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+    .academic-card .tag {
+      font-size: 0.85rem;
+      color: var(--yellow);
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    .academic-card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .academic-card a {
+      color: var(--yellow);
+      font-weight: 500;
+    }
+    .publication-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .publication-item:last-child {
+      border-bottom: none;
+    }
+    .publication-item .pub-icon {
+      color: var(--yellow);
+      font-size: 1.1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .publication-item .pub-content .pub-title {
+      font-weight: 600;
+      color: var(--white);
+    }
+    .publication-item .pub-content .pub-authors,
+    .publication-item .pub-content .pub-journal {
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+    .collab-card {
+      background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .collab-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .collab-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .collab-card .collab-role {
+      color: var(--yellow);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .collab-card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header fade-in">
+      <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <h1>Academic</h1>
+      <p>Research projects, publications, and scientific collaborations.</p>
+    </div>
+
+    <section class="academic-section fade-in">
+      <h2><i class="fas fa-flask"></i> Academic Projects</h2>
+
+      <div class="academic-card">
+        <span class="tag">PhD Thesis</span>
+        <h3>Single-cell and spatial characterisation of the bone marrow microenvironment in multiple myeloma</h3>
+        <p>PhD project focused on characterising the bone marrow microenvironment in multiple myeloma using single-cell RNA-seq and spatial transcriptomics. Developed computational workflows for quality control, differential expression, and network analysis across 500+ samples.</p>
+        <p><a href="../Bone_Marrow_QC/quality_control.html">View QC Reports →</a></p>
+      </div>
+
+      <div class="academic-card">
+        <span class="tag">Computational Framework</span>
+        <h3>EvoFlow — Evolutionary optimisation for flow network analysis</h3>
+        <p>Developed a computational framework using maximum-flow network theory and multi-objective genetic algorithms to prioritise key biological drivers in high-dimensional omics data. Containerised with Nextflow for reproducible, scalable execution.</p>
+        <p><em>Placeholder — details to be populated.</em></p>
+      </div>
+
+      <div class="academic-card">
+        <span class="tag">Spatial Biology</span>
+        <h3>BorderGraph — Neighbourhood graph construction from cell borders</h3>
+        <p>Constructed a neighbourhood graph based on cell border proximity from spatial imaging data, enabling quantification of cell-cell interactions and tissue architecture in the tumour microenvironment.</p>
+        <p><a href="https://github.com/VergaJU/BorderGraph">View on GitHub →</a></p>
+      </div>
+
+      <div class="academic-card">
+        <span class="tag">Multi-omics</span>
+        <h3>Multi-modal integration for CAR-T patient stratification</h3>
+        <p>Developed statistical and ML models for patient stratification in CAR-T therapy, supporting myeloma drug discovery and biomarker evaluation. Collaborated with the Broad Institute and Dana-Farber Cancer Institute.</p>
+        <p><em>Placeholder — details to be populated.</em></p>
+      </div>
+    </section>
+
+    <section class="academic-section fade-in">
+      <h2><i class="ai ai-google-scholar"></i> Publications</h2>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">miRKatAI: An Integrated Database and Multi-agent AI system for microRNA Research</div>
+          <div class="pub-authors">Karen Guerrero-Vazquez et al.</div>
+          <div class="pub-journal">arXiv (2025). doi:10.48550/ARXIV.2508.08331</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Bone Marrow Spatial Signatures Predict Survival Outcomes and Toxicities after CAR-T Therapy in Patients with Relapsed/Refractory Multiple Myeloma</div>
+          <div class="pub-authors">Verga, J.U., Foster, K., Cordas Dos Santos, D.M. et al.</div>
+          <div class="pub-journal">Nature Medicine — Under Review (2026)</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Bone Marrow Spatial Signatures Predict Survival Outcomes and Toxicities after CAR-T Therapy in Patients with Relapsed/Refractory Multiple Myeloma</div>
+          <div class="pub-authors">Yoshinobu Konishi et al.</div>
+          <div class="pub-journal">Blood 144(Supplement 1), pp. 590–590 (Nov 2024). doi:10.1182/blood-2024-204144</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">NK Cell States in Multiple Myeloma: Pathways to Novel Immunotherapies</div>
+          <div class="pub-authors">Verga, J.U. et al.</div>
+          <div class="pub-journal">Blood 144(Supplement 1), pp. 6857–6857 (Nov 2024). doi:10.1182/blood-2024-210297</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Ability To Perform Spatial Transcriptomics in FFPE Decalcified Bone Marrow Samples of Patients With Precursor Myeloma</div>
+          <div class="pub-authors">David Cordas dos Santos et al.</div>
+          <div class="pub-journal">Clinical Lymphoma Myeloma and Leukemia 24, S154–S155 (Sep 2024). doi:10.1016/s2152-2650(24)02106-2</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Genomic technology advances and the promise for precision medicine</div>
+          <div class="pub-authors">Verga, J.U. et al.</div>
+          <div class="pub-journal">Therapeutic Drug Monitoring, Elsevier, pp. 355–371 (2024). doi:10.1016/B978-0-443-18649-3.00007-0</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">A Systems Biology Approach Reveals the Endocrine Disrupting Potential of Aflatoxin B1</div>
+          <div class="pub-authors">Verga, J.U. et al.</div>
+          <div class="pub-journal">Exposure and Health 16(2), pp. 321–340 (May 2023). doi:10.1007/s12403-023-00557-w</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">In-Silico Approaches for the Screening and Discovery of Broad-Spectrum Marine Natural Product Antiviral Agents Against Coronaviruses</div>
+          <div class="pub-authors">Zachary Boswell et al.</div>
+          <div class="pub-journal">Infection and Drug Resistance 16, pp. 2321–2338 (Apr 2023). doi:10.2147/IDR.S395203</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Common Variable Immunodeficiency in Elderly Patients: A Long-Term Clinical Experience</div>
+          <div class="pub-authors">Maria Giovanna Danieli et al.</div>
+          <div class="pub-journal">Biomedicines 10(3), p. 635 (Mar 2022). doi:10.3390/biomedicines10030635</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Integrated Genomic and Bioinformatics Approaches to Identify Molecular Links between Endocrine Disruptors and Adverse Outcomes</div>
+          <div class="pub-authors">Verga, J.U. et al.</div>
+          <div class="pub-journal">International Journal of Environmental Research and Public Health 19(1), p. 574 (Jan 2022). doi:10.3390/ijerph19010574</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Contemporary Approaches to the Discovery and Development of Broad-Spectrum Natural Product Prototypes for the Control of Coronaviruses</div>
+          <div class="pub-authors">George S. Hanna et al.</div>
+          <div class="pub-journal">Journal of Natural Products 84(11), pp. 3001–3007 (Oct 2021). doi:10.1021/acs.jnatprod.1c00625</div>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">Incidence of malignancy in patients with common variable immunodeficiency according to therapeutic delay: an Italian retrospective, monocentric cohort study</div>
+          <div class="pub-authors">Veronica Pedini et al.</div>
+          <div class="pub-journal">Allergy, Asthma & Clinical Immunology 16(1) (Jun 2020). doi:10.1186/s13223-020-00451-z</div>
+        </div>
+      </div>
+
+      <div class="publication-item" style="border-bottom: none;">
+        <div class="pub-icon"><i class="ai ai-google-scholar"></i></div>
+        <div class="pub-content">
+          <div class="pub-title">A Case of CVID-Associated Inflammatory Bowel Disease with CTLA-4 Mutation Treated with Abatacept</div>
+          <div class="pub-authors">Maria Giovanna Danieli et al.</div>
+          <div class="pub-journal">Archives of Clinical and Medical Case Reports 3(6) (2019). doi:10.26502/acmcr.96550124</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="academic-section fade-in">
+      <h2><i class="fas fa-handshake"></i> Collaborations</h2>
+
+      <div class="collab-card">
+        <h3>Broad Institute of MIT and Harvard / Dana-Farber Cancer Institute</h3>
+        <div class="collab-role">Visiting Researcher — Medical Oncology (2024–2025)</div>
+        <p>Led computational analysis for multi-modal oncology research. Managed a 400-sample scRNA-seq study using UK Biobank data. Developed ML models for CAR-T patient stratification.</p>
+        <p><em>Placeholder — additional details to be populated.</em></p>
+      </div>
+
+      <div class="collab-card">
+        <h3>Standard BioTools</h3>
+        <div class="collab-role">Technology Integration Partner</div>
+        <p>Integrated 3D imaging and GPU acceleration, reducing pipeline image registration times by 90%. Deployed U-Net models for image denoising.</p>
+        <p><em>Placeholder — additional details to be populated.</em></p>
+      </div>
+
+      <div class="collab-card">
+        <h3>University of Galway — CÚRAM / School of Medicine</h3>
+        <div class="collab-role">Postdoctoral Researcher (2021–Present)</div>
+        <p>Developed agentic AI systems for research workflow automation. Delivered clinical biostatistical analyses for external partners. Instructed genomic data analysis coursework.</p>
+        <p><em>Placeholder — additional details to be populated.</em></p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span>
+      <div class="card-serve">
+        <i class="fas fa-code"></i>
+        Made by <a href="https://github.com/VergaJU" target="_blank">Jacopo Umberto Verga</a>
+    </span>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

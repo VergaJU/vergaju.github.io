@@ -1,2 +1,4 @@
-
 index.md
+index_old.html
+*.log
+.DS_Store

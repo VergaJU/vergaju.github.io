@@ -1,0 +1,26 @@
+# Jacopo Umberto Verga
+
+## Summary
+AI Research Scientist & Computational Biologist. Postdoctoral Researcher at the University of Galway. Building intelligent systems for biomedical research, clinical AI, and scientific discovery.
+
+## Location
+Galway, Ireland
+
+## Website
+https://vergaju.github.io/
+
+## Sections
+- Home: https://vergaju.github.io/
+- FinanceBro Dashboard: https://vergaju.github.io/finance_bro/finance-bro.html
+- scRNA-Seq QC Reports: https://vergaju.github.io/Bone_Marrow_QC/quality_control.html
+- AI Context: https://vergaju.github.io/about-ai.md
+
+## Profiles
+- GitHub: https://github.com/VergaJU
+- LinkedIn: https://www.linkedin.com/in/jacopoverga/
+- ORCID: https://orcid.org/0000-0003-3814-5937
+- Google Scholar: https://scholar.google.com/citations?user=HGBDBKgAAAAJ&hl=en
+- ResearchGate: https://www.researchgate.net/profile/Jacopo-Verga
+
+## Email
+jacopoumberto.verga@gmail.com

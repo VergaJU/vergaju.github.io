@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vergaju.github.io/sitemap.xml

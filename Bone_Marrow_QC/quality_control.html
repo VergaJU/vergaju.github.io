@@ -3,10 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>QC Reports</title>
+  <title>scRNA-Seq QC Reports — Bone Marrow</title>
+  <meta name="description" content="Single-cell RNA-Seq Quality Control reports — Multiple Myeloma and healthy bone marrow samples. PhD project by Jacopo Umberto Verga." />
+  <meta property="og:title" content="scRNA-Seq QC Reports — Bone Marrow" />
+  <meta property="og:description" content="Single-cell RNA-Seq Quality Control reports for Multiple Myeloma and healthy bone marrow samples." />
+  <meta property="og:image" content="https://vergaju.github.io/04%20Portfolio/assets/images/QC.png" />
+  <meta property="og:url" content="https://vergaju.github.io/Bone_Marrow_QC/quality_control.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23212121'/%3E%3Ctext x='50' y='68' font-family='DM Sans, sans-serif' font-size='48' font-weight='700' fill='%23f7df1e' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <style>
+    .page-header {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .page-header p {
+      color: var(--gray);
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .project-hero {
+      background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+    .project-hero h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--yellow);
+    }
+    .project-hero p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .project-hero .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .project-hero .stat {
+      flex: 1;
+      min-width: 120px;
+    }
+    .project-hero .stat .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--yellow);
+    }
+    .project-hero .stat .stat-label {
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+    .placeholder-section {
+      background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);
+      border: 1px dashed var(--gray-200);
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .placeholder-section i {
+      font-size: 1.5rem;
+      color: var(--yellow);
+      opacity: 0.6;
+      margin-bottom: 12px;
+    }
+    .placeholder-section h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .placeholder-section p {
+      color: var(--gray);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .placeholder-section .hint {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      font-style: italic;
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -15,8 +110,33 @@
     </div>
   </header>
   <div class="container">
-    <section class="projects">
-      <h2 class="target">QC Reports</h2>
+    <div class="page-header fade-in">
+      <h1>Bone Marrow scRNA-Seq Quality Control</h1>
+      <p>Comprehensive single-cell RNA sequencing quality control reports from my PhD research on the bone marrow microenvironment in multiple myeloma.</p>
+    </div>
+
+    <div class="project-hero fade-in">
+      <h2><i class="fas fa-dna"></i> About the Project</h2>
+      <p>This project involved the systematic quality control of single-cell RNA-seq data from <strong>500+ samples</strong> spanning multiple public datasets (PRJNA511584, PRJNA579391, PRJNA492227, PRJNA694128, PRJNA723584, PRJNA732205). Samples include <strong>Multiple Myeloma</strong> (MM), <strong>Smoldering Myeloma</strong> (SMM), <strong>Monoclonal Gammopathy of Undetermined Significance</strong> (MGUS), and <strong>healthy donors</strong>.</p>
+      <p>Each sample was processed through a standardised pre-processing pipeline including alignment, barcode filtering, UMI deduplication, and cell-level QC metric computation. The reports provide per-sample visual summaries of gene detection, mitochondrial content, ribosomal content, and cell complexity to inform downstream filtering decisions.</p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">500+</div>
+          <div class="stat-label">Samples processed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">6</div>
+          <div class="stat-label">Public datasets</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">MM / SMM / MGUS / Healthy</div>
+          <div class="stat-label">Conditions</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="projects fade-in">
+      <h2 class="target">QC Reports by Cohort</h2>
       <div class="cards">
         <div class="card">
           <div class="img-project">
@@ -26,7 +146,7 @@
             <span class="title-project">
               <a href="./mm/pre_processing_datasets.html" target="_blank">Multiple Myeloma</a>
             </span>
-            <span class="tag-project">Single-cell QC reports from MM samples</span>
+            <span class="tag-project">Single-cell QC reports from MM, SMM, and MGUS samples</span>
           </div>
         </div>
         <div class="card">
@@ -37,11 +157,53 @@
             <span class="title-project">
               <a href="./healthy/pre_processing_datasets.html" target="_blank">Healthy Samples</a>
             </span>
-            <span class="tag-project">Single-cell QC reports from healthy donors</span>
+            <span class="tag-project">Single-cell QC reports from healthy bone marrow donors</span>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="placeholder-section fade-in">
+      <i class="fas fa-microscope"></i>
+      <h3>Methodology</h3>
+      <p>Detailed description of the pre-processing pipeline, QC thresholds, and filtering criteria used across all samples.</p>
+      <p class="hint">Placeholder — content to be populated.</p>
+    </div>
+
+    <div class="placeholder-section fade-in">
+      <i class="fas fa-chart-bar"></i>
+      <h3>Key Findings</h3>
+      <p>Summary of quality trends observed across conditions, including differences in mitochondrial content, library complexity, and cell capture efficiency between MM and healthy samples.</p>
+      <p class="hint">Placeholder — content to be populated.</p>
+    </div>
+
+    <div class="placeholder-section fade-in">
+      <i class="fas fa-tools"></i>
+      <h3>Tools & Workflows</h3>
+      <p>Overview of the software and pipelines used: Cell Ranger for alignment, Seurat/Scanpy for downstream processing, custom R/Python scripts for QC metric aggregation and visualisation.</p>
+      <p class="hint">Placeholder — content to be populated.</p>
+    </div>
   </div>
+
+  <footer>
+    <span>
+      <div class="card-serve">
+        <i class="fas fa-code"></i>
+        Made by <a href="https://github.com/VergaJU" target="_blank">Jacopo Umberto Verga</a>
+    </span>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+  </script>
 </body>
 </html>

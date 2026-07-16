@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jacopo Umberto Verga — Projects &amp; Updates</title>
+  <link href="https://vergaju.github.io/" />
+  <link href="https://vergaju.github.io/feed.xml" rel="self" />
+  <updated>2025-07-14T00:00:00Z</updated>
+  <author>
+    <name>Jacopo Umberto Verga</name>
+    <email>jacopoumberto.verga@gmail.com</email>
+  </author>
+  <id>https://vergaju.github.io/</id>
+
+  <entry>
+    <title>HissMed — Agentic Literature Assistant</title>
+    <link href="https://github.com/VergaJU/HissMed" />
+    <id>https://github.com/VergaJU/HissMed</id>
+    <updated>2025-07-14T00:00:00Z</updated>
+    <summary>Agentic literature assistant for biomedical research.</summary>
+  </entry>
+
+  <entry>
+    <title>MiRKatAI — Multi-Agent AI for Scientific Research</title>
+    <link href="https://medium.com/@jacopoumberto.verga/how-to-implement-an-ai-multi-agent-to-boost-your-scientific-research-31288149bdff" />
+    <id>https://medium.com/@jacopoumberto.verga/how-to-implement-an-ai-multi-agent-to-boost-your-scientific-research-31288149bdff</id>
+    <updated>2025-07-14T00:00:00Z</updated>
+    <summary>Medium blog post on implementing a multi-agent AI system for scientific discovery.</summary>
+  </entry>
+
+  <entry>
+    <title>FinanceBro — Investment Dashboard</title>
+    <link href="https://vergaju.github.io/finance_bro/finance-bro.html" />
+    <id>https://vergaju.github.io/finance_bro/finance-bro.html</id>
+    <updated>2025-07-14T00:00:00Z</updated>
+    <summary>Dashboard to simulate and compare investment wallet strategies.</summary>
+  </entry>
+
+  <entry>
+    <title>BorderGraph — Cell Border Neighborhood Graph</title>
+    <link href="https://github.com/VergaJU/BorderGraph" />
+    <id>https://github.com/VergaJU/BorderGraph</id>
+    <updated>2025-07-14T00:00:00Z</updated>
+    <summary>Construct a neighborhood graph based on cell borders.</summary>
+  </entry>
+</feed>
