@@ -61,6 +61,7 @@ div.container{
 
 header{
     display: flex;
+    align-items: center;
     justify-self: center;
     width: 100%;
     height: 60px;
@@ -85,8 +86,7 @@ header .content{
 header .content span.logo{
     font-size: 26px;
     font-weight: 700;
-    margin-left: 10%;
-    
+    margin-left: 16px;
 
 }
 
@@ -413,6 +413,40 @@ section.projects div.cards div.card div.description-project span.title-project{
     margin-bottom: 6px;
 }
 
+.projects-preview-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.projects-preview-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.projects-preview-card p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.projects-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--yellow);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+.projects-link:hover {
+    opacity: 0.8;
+}
 section.projects div.cards div.card span.tag-project {
     font-size: 14px;
     font-weight: 400;
@@ -542,7 +576,117 @@ div.goto-top i {
     color: var(--yellow);
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 101;
+    flex-shrink: 0;
+    position: fixed;
+    top: 15px;
+    left: 16px;
+}
+
+.hamburger:hover span {
+    background: var(--yellow);
+}
+
+.hamburger span {
+    display: block;
+    height: 2.5px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Side Navigation */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: var(--gray-400);
+    border-right: 1px solid var(--gray-200);
+    z-index: 200;
+    transition: left 0.35s ease;
+    padding-top: 80px;
+    overflow-y: auto;
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.side-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.side-nav ul li {
+    width: 100%;
+}
+
+.side-nav ul li a {
+    display: block;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    transition: background 0.2s, color 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.side-nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-left-color: var(--yellow);
+    color: var(--yellow);
+}
+
+/* Overlay */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.nav-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
 @media screen and (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
     header{
         margin-bottom: 30px;
     }

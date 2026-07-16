@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Jacopo Umberto Verga</title>
+  <meta name="description" content="Projects by Jacopo Umberto Verga — AI, computational biology, and scientific software." />
+  <meta property="og:title" content="Projects — Jacopo Umberto Verga" />
+  <meta property="og:description" content="Projects by Jacopo Umberto Verga." />
+  <meta property="og:url" content="https://vergaju.github.io/projects/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23212121'/%3E%3Ctext x='50' y='68' font-family='DM Sans, sans-serif' font-size='48' font-weight='700' fill='%23f7df1e' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <style>
+    .page-header {
+      text-align: center;
+      padding: 60px 0 40px;
+    }
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .page-header p {
+      color: var(--gray);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--yellow);
+      font-weight: 500;
+      margin-bottom: 40px;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover {
+      opacity: 0.8;
+    }
+    section.projects-section {
+      margin-bottom: 60px;
+    }
+    section.projects-section h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    section.projects-section h2 i {
+      color: var(--yellow);
+      font-size: 1.5rem;
+    }
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .proj-card {
+      display: flex;
+      gap: 24px;
+      background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      align-items: center;
+    }
+    .proj-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .proj-img {
+      width: 180px;
+      height: 120px;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--dark);
+      border: 1px solid var(--gray-200);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .proj-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .proj-img i {
+      font-size: 2.5rem;
+      color: var(--yellow);
+    }
+    .proj-body {
+      flex: 1;
+    }
+    .proj-body h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .proj-body .proj-tag {
+      font-size: 0.85rem;
+      color: var(--yellow);
+      font-weight: 500;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    .proj-body p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .proj-body a {
+      color: var(--yellow);
+      font-weight: 500;
+    }
+    @media screen and (max-width: 700px) {
+      .proj-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .proj-img {
+        width: 100%;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="side-nav" id="side-nav">
+    <ul>
+      <li><a href="/#about-me">about me</a></li>
+      <li><a href="/#current-focus">focus</a></li>
+      <li><a href="/projects/">projects</a></li>
+      <li><a href="/#skills">my skills</a></li>
+      <li><a href="/academic/">academic</a></li>
+      <li><a href="/blog/">blog</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <div class="container">
+    <div class="page-header fade-in">
+      <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <h1>Projects</h1>
+      <p>Things I've built — from research tools to web apps.</p>
+    </div>
+
+    <section class="projects-section fade-in">
+      <div class="projects-grid">
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Finance charts">
+          </div>
+          <div class="proj-body">
+            <h3>FinanceBro</h3>
+            <span class="proj-tag">Dashboard to simulate and compare investment wallets</span>
+            <p>A financial dashboard for simulating and comparing investment portfolio performance. Built with interactive visualizations and real-time data.</p>
+            <a href="../finance_bro/finance-bro.html">View Project →</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="https://github.com/VergaJU/HissMed/blob/main/HissMed_logo.png?raw=true" alt="HissMed logo">
+          </div>
+          <div class="proj-body">
+            <h3>HissMed</h3>
+            <span class="proj-tag">Agentic literature assistant</span>
+            <p>An AI-powered literature assistant that helps researchers navigate and synthesize scientific literature using agentic AI workflows.</p>
+            <a href="https://github.com/VergaJU/HissMed" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img" style="background: linear-gradient(145deg, var(--gray-400) 0%, #2a2a2a 100%);">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <div class="proj-body">
+            <h3>MiRKatAI App</h3>
+            <span class="proj-tag">AI-powered platform for microRNA research</span>
+            <p>A conversational AI agent for microRNA research, integrating SQL database queries, literature search, and on-the-fly visualisation through natural language.</p>
+            <a href="http://mirkat.ie/" target="_blank" rel="noopener noreferrer">Visit Website →</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="../04 Portfolio/assets/images/QC.png" alt="scRNA-Seq quality control report preview">
+          </div>
+          <div class="proj-body">
+            <h3>Bone marrows scRNASeq QC</h3>
+            <span class="proj-tag">Collection of QC reports from my PhD</span>
+            <p>A comprehensive collection of quality control reports for single-cell RNA-seq data from bone marrow samples, covering both MM and healthy donors.</p>
+            <a href="../Bone_Marrow_QC/quality_control.html">View Reports →</a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-img">
+            <img src="../04 Portfolio/assets/images/BorderGraph.png" alt="BorderGraph neighborhood graph visualization">
+          </div>
+          <div class="proj-body">
+            <h3>BorderGraph</h3>
+            <span class="proj-tag">Construct a neighborhood graph based on cell borders</span>
+            <p>A computational method to construct neighborhood graphs from spatial imaging data based on cell border proximity, enabling quantification of cell-cell interactions in the tumour microenvironment.</p>
+            <a href="https://github.com/VergaJU/BorderGraph" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span>
+      <div class="card-serve">
+        <i class="fas fa-code"></i>
+        Made by <a href="https://github.com/VergaJU" target="_blank">Jacopo Umberto Verga</a>
+    </span>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+      const hamburger = document.getElementById('hamburger');
+      const sideNav = document.getElementById('side-nav');
+      const overlay = document.getElementById('nav-overlay');
+
+      function toggleMenu() {
+        hamburger.classList.toggle('open');
+        sideNav.classList.toggle('open');
+        overlay.classList.toggle('open');
+        document.body.style.overflow = sideNav.classList.contains('open') ? 'hidden' : '';
+      }
+
+      function closeMenu() {
+        hamburger.classList.remove('open');
+        sideNav.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', closeMenu);
+      sideNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    });
+  </script>
+</body>
+</html>

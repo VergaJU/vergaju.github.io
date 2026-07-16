@@ -171,6 +171,22 @@
   </style>
 </head>
 <body>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class="side-nav" id="side-nav">
+    <ul>
+      <li><a href="/#about-me">about me</a></li>
+      <li><a href="/#current-focus">focus</a></li>
+      <li><a href="/projects/">projects</a></li>
+      <li><a href="/#skills">my skills</a></li>
+      <li><a href="/academic/">academic</a></li>
+      <li><a href="/blog/">blog</a></li>
+    </ul>
+  </nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
   <div class="container">
     <div class="page-header fade-in">
       <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
@@ -375,6 +391,30 @@
         });
       }, { threshold: 0.15 });
       document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+      const hamburger = document.getElementById('hamburger');
+      const sideNav = document.getElementById('side-nav');
+      const overlay = document.getElementById('nav-overlay');
+
+      function toggleMenu() {
+        hamburger.classList.toggle('open');
+        sideNav.classList.toggle('open');
+        overlay.classList.toggle('open');
+        document.body.style.overflow = sideNav.classList.contains('open') ? 'hidden' : '';
+      }
+
+      function closeMenu() {
+        hamburger.classList.remove('open');
+        sideNav.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', closeMenu);
+      sideNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
     });
   </script>
 </body>
